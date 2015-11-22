@@ -1,0 +1,20 @@
+rule html
+  command = jade --pretty --out html $in
+  description = [ $out ]
+
+build html/index.html: html jade/index.jade | jade/base.jade $
+  semantic/dist/semantic.min.css semantic/dist/semantic.min.js
+
+rule deploy
+  command = git subtree push --prefix html origin gh-pages
+  description = [ GitHub Pages ]
+
+build deploy: deploy
+
+rule clean
+  command = rm html/index.html
+  description = [ Cleaning ]
+
+build clean: clean
+
+default html/index.html

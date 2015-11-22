@@ -1,0 +1,14 @@
+{
+  "name": "hutsulvil"
+  , "version": "0.1.0"
+  , "description": "Hutsulvil Web Site"
+  , "author": "Volodymyr Prokopyuk <volodymyrprokopyuk@gmail.com>"
+  , "contributors": [ "Svitlana Fedoriv <svitlanafedoriv93@gmail.com>" ]
+  , "repository": {
+    "type": "git"
+    , "url": "https://github.com/volodymyrprokopyuk/hutsulvil.git" }
+  , "license": "MIT"
+  , "dependencies": {
+    "semantic-ui": "2.1.6"
+  }
+}
