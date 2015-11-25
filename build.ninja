@@ -1,9 +1,17 @@
+rule css
+  command = stylus --compress --out css $in
+  description = [ $out ]
+
+build css/style.css: css styl/style.styl
+
 rule html
-  command = jade --pretty --out html $in
+  command = jade --out html $in
   description = [ $out ]
 
 build html/index.html: html jade/index.jade | jade/base.jade $
-  semantic/dist/semantic.min.css semantic/dist/semantic.min.js
+  semantic/dist/semantic.min.css $
+  semantic/dist/semantic.min.js $
+  css/style.css
 
 rule deploy
   command = git subtree push --prefix html origin gh-pages
@@ -12,7 +20,7 @@ rule deploy
 build deploy: deploy
 
 rule clean
-  command = rm html/index.html
+  command = rm html/index.html css/style.css
   description = [ Cleaning ]
 
 build clean: clean
