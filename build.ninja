@@ -1,3 +1,9 @@
+rule update-site
+  command = cp site/globals/site.variables semantic/src/site/globals
+  description = [ cd semantic && gulp build ]
+
+build update-site: update-site
+
 rule css
   command = stylus --compress --out css $in
   description = [ $out ]
