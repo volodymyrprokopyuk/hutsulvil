@@ -1,5 +1,27 @@
-/*******************************
-     User Global Variables
-*******************************/
+/*
+ * fonts
+ */
+@fontName          : 'Philosopher';
+@fontSmoothing     : antialiased;
 
+@headerFont        : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@pageFont          : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+@googleFontName    : @fontName;
+@importGoogleFonts : false;
+@googleFontSizes   : '400,700';
+@googleSubset      : 'latin,cyrillic';
+
+@googleProtocol    : 'https://';
+@googleFontRequest : '@{googleFontName}:@{googleFontSizes}&subset=@{googleSubset}';
+
+/*
+ * base sizes
+ */
+@emSize: 20px;
+@fontSize: 20px;
+
+/*
+ * paths (icon font)
+ */
 @fontPath: 'fonts';

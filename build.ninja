@@ -1,6 +1,7 @@
 rule update-site
-  command = cp site/globals/site.variables semantic/src/site/globals
-  description = [ cd semantic && gulp build ]
+  command = cp site/globals/site.variables semantic/src/site/globals $
+    && cd semantic && gulp build
+  description = [ Building Semantic UI ]
 
 build update-site: update-site
 
