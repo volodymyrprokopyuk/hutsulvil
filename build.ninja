@@ -1,9 +1,14 @@
-rule update-site
+rule semantic-site
   command = cp site/globals/site.variables semantic/src/site/globals $
+    && cp site/elements/icon.variables semantic/src/site/elements $
+    && cp site/elements/image.variables semantic/src/site/elements $
     && cd semantic && gulp build
   description = [ Building Semantic UI ]
 
-build update-site: update-site
+build semantic/dist/semantic.min.css: semantic-site | $
+  site/globals/site.variables $
+  site/elements/icon.variables $
+  site/elements/image.variables
 
 rule css
   command = stylus --compress --out css $in
@@ -17,7 +22,6 @@ rule html
 
 build html/index.html: html jade/index.jade | jade/base.jade $
   semantic/dist/semantic.min.css $
-  semantic/dist/semantic.min.js $
   css/style.css
 
 rule deploy
