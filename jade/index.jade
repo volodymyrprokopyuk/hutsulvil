@@ -9,8 +9,9 @@ block body
   - var location = 'Івано-Франківська обл., смт. Ворохта';
   - var address = 'вул. Грушевського, 30-Б';
 
-  - var vk = 'http://vk.com/hutsulvil';
   - var facebook = 'https://www.facebook.com/groups/1554076214867394/';
+  - var vk = 'http://vk.com/hutsulvil';
+  - var google = 'https://plus.google.com/107638665209904408567';
   - var twitter = 'https://twitter.com/hutsulvil';
 
   - var apiKey = 'AIzaSyDE82iUg3C5cPuOJsAqFl-9tQNNjrwclv4';
@@ -27,11 +28,13 @@ block body
           .social
             .ui.centered.grid
               .center.aligned.column
-                a(href=vk target="_blank") #[i.big.vk.icon]
+                a(href=facebook target="_blank") #[i.large.facebook.icon]
               .center.aligned.column
-                a(href=facebook target="_blank") #[i.big.facebook.icon]
+                a(href=vk target="_blank") #[i.large.vk.icon]
               .center.aligned.column
-                a(href=twitter target="_blank") #[i.big.twitter.icon]
+                a(href=google target="_blank") #[i.large.google.plus.icon]
+              .center.aligned.column
+                a(href=twitter target="_blank") #[i.large.twitter.icon]
         .sixteen.wide.column
           .contacts
             .ui.stackable.grid.container
@@ -61,6 +64,11 @@ block body
           кращий рівень комфорту й насичений активний відпочинок у Карпатах.
           Бажаємо Вам доброго настрою і міцного здоров'я! Приїжджайте до нас у
           гості та Ви не помітите, як Ґуцулвіль стане для Вас рідним!
+        h3.ui.header Розташування
+          .sub.header.
+            Ґуцулвіль розташований на відстані 500м від центру Ворохти та
+            залізничного вокзалу. Зручний під'їзд по асфальтованій дорозі. До
+            лісу 200м
       .two.wide.center.aligned.column
         i.huge.tree.icon
       .fourteen.wide.column
@@ -181,7 +189,7 @@ block body
         h2.ui.header Номери
           .sub.header.
             Номери у сучасному та дерев'яному стилях з телебаченням, Wi-Fi та
-            іншими зручностями
+            іншими зручностями (20 - 25 місць)
         .ui.medium.image.img
           img(src="img/room001.jpg")
           .ui.green.ribbon.label.
@@ -217,7 +225,7 @@ block body
             Резервуйте за телефонами або через електронну пошту. Слідкуйте за
             Ґуцулвіль в соціальних мережах
         .ui.stackable.grid
-          .eight.wide.column
+          .seven.wide.column
             .ui.relaxed.list
               .item #[i.phone.icon] #{phone1}
               .item #[i.phone.icon] #{phone2}
@@ -227,13 +235,15 @@ block body
               .item #[i.marker.icon] #{location}
               .item #[i.home.icon] #{address}
               .item
-                a(href=vk target="_blank") #[i.vk.icon] ВКонтакті
-              .item
                 a(href=facebook target="_blank") #[i.facebook.icon] Facebook
               .item
+                a(href=vk target="_blank") #[i.vk.icon] ВКонтакті
+              .item
+                a(href=google target="_blank") #[i.google.plus.icon] Google+
+              .item
                 a(href=twitter target="_blank") #[i.twitter.icon] @hutsulvil
-          .eight.wide.column
-            iframe(width="425" height="375" scrolling="no" allowfullscreen
+          .nine.wide.column
+            iframe(width="400" height="350" scrolling="no" allowfullscreen
               frameborder="0" marginheight="0" marginwidth="0"
               src="https://www.google.com/maps/embed/v1/place?key=#{apiKey}&q=place_id:#{placeId}&attribution_source=Google+Maps+Embed+API&attribution_web_url=#{url}&zoom=13&language=ru")
   #footer
