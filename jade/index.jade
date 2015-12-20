@@ -39,13 +39,13 @@ block body
           .contacts
             .ui.stackable.grid.container
               .four.wide.center.aligned.column
-                p #[i.phone.icon] #{phone1}
+                p #[i.phone.icon] #{ phone1 }
               .four.wide.center.aligned.column
-                p #[i.phone.icon] #{phone2}
+                p #[i.phone.icon] #{ phone2 }
               .four.wide.center.aligned.column
-                p #[i.phone.icon] #{phone3}
+                p #[i.phone.icon] #{ phone3 }
               .four.wide.center.aligned.column
-                a(href="mailto:#{email}") #[i.mail.icon] #{email}
+                a(href="mailto:#{ email }") #[i.mail.icon] #{ email }
   #content
     .ui.stackable.relaxed.grid.container
       .two.wide.center.aligned.column
@@ -183,6 +183,8 @@ block body
           .sub.header.
             Приємне проведення часу за духмяним карпатським чаєм та цікавими
             бесідами
+        .ui.medium.image.img
+          img(src="img/arbor001.jpg")
       .two.wide.center.aligned.column
         i.huge.privacy.icon
       .fourteen.wide.column
@@ -194,22 +196,33 @@ block body
           img(src="img/room001.jpg")
           .ui.green.ribbon.label.
             #[i.red.large.male.icon]#[i.red.large.male.icon]
-            #[.ui.red.circular.label 100]
+          //-#[.ui.red.circular.label 100]
         .ui.medium.image.img
           img(src="img/room002.jpg")
           .ui.green.ribbon.label.
             #[i.red.large.male.icon]#[i.red.large.male.icon]
-            #[i.red.large.male.icon]#[.ui.red.circular.label 150]
+            #[i.red.large.male.icon]
         .ui.medium.image.img
           img(src="img/room003.jpg")
           .ui.green.ribbon.label.
             #[i.red.large.male.icon]#[i.red.large.male.icon]
-            #[i.red.large.male.icon]#[.ui.red.circular.label 150]
+            #[i.red.large.male.icon]
         .ui.medium.image.img
           img(src="img/room004.jpg")
           .ui.green.ribbon.label.
             #[i.red.large.male.icon]#[i.red.large.male.icon]
-            #[.ui.red.circular.label 100]
+        .ui.medium.image.img
+          img(src="img/room005.jpg")
+          .ui.green.ribbon.label.
+            #[i.red.large.male.icon]#[i.red.large.male.icon]
+        .ui.medium.image.img
+          img(src="img/room006.jpg")
+          .ui.green.ribbon.label.
+            #[i.red.large.male.icon]#[i.red.large.male.icon]
+        .ui.medium.image.img
+          img(src="img/room007.jpg")
+          .ui.green.ribbon.label.
+            #[i.red.large.male.icon]#[i.red.large.male.icon]
       .two.wide.center.aligned.column
         i.huge.university.icon
       .fourteen.wide.column
@@ -227,13 +240,13 @@ block body
         .ui.stackable.grid
           .seven.wide.column
             .ui.relaxed.list
-              .item #[i.phone.icon] #{phone1}
-              .item #[i.phone.icon] #{phone2}
-              .item #[i.phone.icon] #{phone3}
+              .item #[i.phone.icon] #{ phone1 }
+              .item #[i.phone.icon] #{ phone2 }
+              .item #[i.phone.icon] #{ phone3 }
               .item
-                a(href="mailto:#{email}") #[i.mail.icon] #{email}
-              .item #[i.marker.icon] #{location}
-              .item #[i.home.icon] #{address}
+                a(href="mailto:#{email}") #[i.mail.icon] #{ email }
+              .item #[i.marker.icon] #{ location }
+              .item #[i.home.icon] #{ address }
               .item
                 a(href=facebook target="_blank") #[i.facebook.icon] Facebook
               .item
@@ -245,7 +258,7 @@ block body
           .nine.wide.column
             iframe(width="400" height="350" scrolling="no" allowfullscreen
               frameborder="0" marginheight="0" marginwidth="0"
-              src="https://www.google.com/maps/embed/v1/place?key=#{apiKey}&q=place_id:#{placeId}&attribution_source=Google+Maps+Embed+API&attribution_web_url=#{url}&zoom=13&language=ru")
+              src="https://www.google.com/maps/embed/v1/place?key=#{apiKey}&q=place_id:#{ placeId }&attribution_source=Google+Maps+Embed+API&attribution_web_url=#{ url }&zoom=13&language=ru")
   #footer
     .ui.stackable.relaxed.grid.container
       .two.wide.center.aligned.column
