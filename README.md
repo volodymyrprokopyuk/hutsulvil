@@ -1,6 +1,6 @@
 # Ґуцулвіль веб сайт
 
-[http://www.hutsulvil.com](http://www.hutsulvil.com)
+[https://hutsulvil.org](https://hutsulvil.org)
 
 ## Installation
 
